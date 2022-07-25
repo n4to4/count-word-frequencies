@@ -30,7 +30,7 @@ fn main() {
     }
 
     let mut v = map.into_iter().collect::<Vec<_>>();
-    v.sort_by(|a, b| b.1.cmp(&a.1));
+    v.sort_by(|a, b| a.1.cmp(&b.1).reverse());
 
     for (w, c) in v.iter() {
         println!("{w} {c}");
